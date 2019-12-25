@@ -9,8 +9,8 @@ import pl.kanban.kanban_table.service.KanbanService;
 import java.util.List;
 
 @RestController
-//@CrossOrigin(origins = "https://kanban-springboot.herokuapp.com")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://kanban-springboot.herokuapp.com")
+//@CrossOrigin(origins = "http://localhost:4200")
 public class KanbanApi {
     private KanbanService kanbanService;
     @Autowired

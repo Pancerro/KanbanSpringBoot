@@ -20,10 +20,10 @@ public class KanbanTableApplication {
     CommandLineRunner init(TaskRepo userRepository) {
         return args -> {
             Stream.of("John", "Julie", "Jennifer", "Helen", "Rachel").forEach(name -> {
-                Task user = new Task(name,"do");
+                Task user = new Task(name,"do","xd","green");
                 userRepository.save(user);
             });
-            Task task=new Task("hehe","done");
+            Task task=new Task("hehe","done","bez smiania","red");
             userRepository.save(task);
             userRepository.findAll().forEach(System.out::println);
         };

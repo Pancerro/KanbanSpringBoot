@@ -25,7 +25,6 @@ public class KanbanSerImp implements KanbanService {
         Optional<Task> deleteTask = taskRepo.findById(id);
         if(deleteTask.isPresent()) taskRepo.deleteById(id);
     }
-
     @Override
     public void addTask(Task task) {
         Optional<Task> oldTask = taskRepo.findById(task.getId());

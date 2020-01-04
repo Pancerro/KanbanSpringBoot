@@ -9,13 +9,31 @@ public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String taskTitle,taskTable;
+    private String taskTitle,taskTable,taskText,taskPriority;
     public Task() {
     }
 
-    public Task(String taskTitle, String taskTable) {
+    public Task(String taskTitle, String taskTable, String taskText, String taskPriority) {
         this.taskTitle = taskTitle;
         this.taskTable = taskTable;
+        this.taskText = taskText;
+        this.taskPriority = taskPriority;
+    }
+
+    public String getTaskText() {
+        return taskText;
+    }
+
+    public void setTaskText(String taskText) {
+        this.taskText = taskText;
+    }
+
+    public String getTaskPriority() {
+        return taskPriority;
+    }
+
+    public void setTaskPriority(String taskPriority) {
+        this.taskPriority = taskPriority;
     }
 
     public long getId() {

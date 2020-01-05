@@ -4,7 +4,7 @@ package pl.kanban.kanban_table.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="Do")
+@Table(name="Kanban")
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

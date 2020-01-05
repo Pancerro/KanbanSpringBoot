@@ -32,6 +32,8 @@ public class KanbanSerImp implements KanbanService {
             Task updateTask=oldTask.get();
             updateTask.setTaskTitle(task.getTaskTitle());
             updateTask.setTaskTable(task.getTaskTable());
+            updateTask.setTaskText(task.getTaskText());
+            updateTask.setTaskPriority(task.getTaskPriority());
             taskRepo.save(updateTask);
         }
         else taskRepo.save(task);

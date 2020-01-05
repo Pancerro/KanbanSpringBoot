@@ -23,11 +23,13 @@ public class KanbanApi {
         return new ResponseEntity<>(taskList, HttpStatus.OK);
     }
     @PostMapping("/kanban")
-    public void addTask(@RequestBody Task task) {
+    public ResponseEntity<List<Task>> addTask(@RequestBody Task task) {
     kanbanService.addTask(task);
+        return  new ResponseEntity<>(HttpStatus.OK);
     }
     @DeleteMapping("/kanban/{id}")
-    public void deleteTask(@PathVariable long id) {
+    public ResponseEntity<List<Task>> deleteTask(@PathVariable long id) {
         kanbanService.deleteTask(id);
+        return  new ResponseEntity<>(HttpStatus.OK);
     }
 }

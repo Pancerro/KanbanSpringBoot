@@ -9,31 +9,16 @@ public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String taskTitle,taskTable,taskText,taskPriority;
+    private String taskTitle,taskTable,taskText,taskPriority,taskUsername;
     public Task() {
     }
 
-    public Task(String taskTitle, String taskTable, String taskText, String taskPriority) {
+    public Task(String taskTitle, String taskTable, String taskText, String taskPriority, String taskUsername) {
         this.taskTitle = taskTitle;
         this.taskTable = taskTable;
         this.taskText = taskText;
         this.taskPriority = taskPriority;
-    }
-
-    public String getTaskText() {
-        return taskText;
-    }
-
-    public void setTaskText(String taskText) {
-        this.taskText = taskText;
-    }
-
-    public String getTaskPriority() {
-        return taskPriority;
-    }
-
-    public void setTaskPriority(String taskPriority) {
-        this.taskPriority = taskPriority;
+        this.taskUsername = taskUsername;
     }
 
     public long getId() {
@@ -60,12 +45,39 @@ public class Task {
         this.taskTable = taskTable;
     }
 
+    public String getTaskText() {
+        return taskText;
+    }
+
+    public void setTaskText(String taskText) {
+        this.taskText = taskText;
+    }
+
+    public String getTaskPriority() {
+        return taskPriority;
+    }
+
+    public void setTaskPriority(String taskPriority) {
+        this.taskPriority = taskPriority;
+    }
+
+    public String getTaskUsername() {
+        return taskUsername;
+    }
+
+    public void setTaskUsername(String taskUsername) {
+        this.taskUsername = taskUsername;
+    }
+
     @Override
     public String toString() {
         return "Task{" +
                 "id=" + id +
                 ", taskTitle='" + taskTitle + '\'' +
                 ", taskTable='" + taskTable + '\'' +
+                ", taskText='" + taskText + '\'' +
+                ", taskPriority='" + taskPriority + '\'' +
+                ", taskUsername='" + taskUsername + '\'' +
                 '}';
     }
 }
